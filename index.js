@@ -15,7 +15,7 @@ app.use("/users",userRouter)
 app.use(authenticate)
 app.use("/contact",contactRouter)
 
-app.listen(5000,async()=>{
+app.listen(process.env.PORT,async()=>{
     try {
         await connection
         console.log(`Database has been connected`)
